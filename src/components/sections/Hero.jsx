@@ -18,16 +18,16 @@ export default function RemoteRecruitHero() {
       >
         <circle cx="0" cy="0" r="80" fill="none" />
         <circle
-          cx="1"
+          cx="2"
           cy="-10"
-          r="80"
-          fill="rgba(255,255,255,0.02)"
+          r="90"
+          fill="rgba(255,255,255,0.03)"
           transform="translate(80, 80)"
         />
         <circle
           cx="570"
           cy="400"
-          r="100"
+          r="140"
           fill="rgba(255,255,255,0.12)"
           stroke="none"
         />
@@ -41,7 +41,7 @@ export default function RemoteRecruitHero() {
         <h1
           className="font-bold text-white m-0"
           style={{
-            fontSize: "46px",
+            fontSize: "50px",
             lineHeight: 1.15,
             letterSpacing: "-0.5px",
             marginBottom: "24px",
@@ -54,8 +54,8 @@ export default function RemoteRecruitHero() {
           className="mx-auto m-0"
           style={{
             color: "rgba(255,255,255,0.88)",
-            fontSize: "16px",
-            maxWidth: "620px",
+            fontSize: "20px",
+            maxWidth: "780px",
             lineHeight: 1.8,
           }}
         >

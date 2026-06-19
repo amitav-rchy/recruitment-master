@@ -27,7 +27,7 @@ export default function Navbar() {
           </button>
           <button
             href="#"
-            className="text-sm font-semibold bg-[#49A0C7] cursor-pointer text-white px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-blue-400/25 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B5BF5]"
+            className="text-sm font-semibold bg-primary cursor-pointer text-white px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-blue-400/25 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B5BF5]"
           >
             Sign Up
           </button>

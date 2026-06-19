@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import Badge from '../ui/Badge.jsx'
 import { useReveal } from '../../hooks/useReveal.js'
 import { fadeLeft, fadeRight } from '../../animations/variants.js'
 
@@ -18,14 +17,15 @@ export default function ShowcaseTalents() {
           animate={leftIn ? 'visible' : 'hidden'}
           className="flex-1"
         >
-          <Badge text="Custom Profile" />
+          <h3 className="bg-secondary font-[300] px-4 py-2 rounded-full inline-block text-[12px] font-semibold text-gray-600">Custom Profile</h3>
           <h2
             id="showcase-heading"
-            className="text-3xl md:text-4xl font-bold text-[#0B1E4F] mb-5 leading-snug"
+            className="text-3xl md:text-4xl text-[#0B1E4F] mb-5 leading-snug mt-8"
+            style={{ fontWeight: 500 }}
           >
             Showcase Your Talents
           </h2>
-          <p className="text-gray-500 text-base leading-relaxed">
+          <p className="text-gray-500 text-base leading-relaxed text-[19px]" style={{ maxWidth: '450px', lineHeight: '1.9' }}>
             Personalize your profile with everything that makes you unique. Add an
             introductory video and other media for a personal touch that stands out to
             employers and candidates.

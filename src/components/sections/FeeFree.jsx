@@ -35,16 +35,15 @@ export default function FeeFree() {
           animate={rightIn ? 'visible' : 'hidden'}
           className="flex-1"
         >
-          <p className="text-sm font-semibold text-[#3B5BF5] mb-3 tracking-wide">
-            Actually Fee Free
-          </p>
+          <h3 className="bg-secondary font-[300] px-4 py-2 rounded-full inline-block text-[12px] font-semibold text-gray-600">Actually Fee Free</h3>
           <h2
             id="feefree-heading"
-            className="text-3xl md:text-4xl font-bold text-[#0B1E4F] mb-5 leading-snug"
+            className="text-3xl md:text-4xl text-[#0B1E4F] mb-5 leading-snug mt-8"
+            style={{ fontWeight: 500 }}
           >
             Fee-Free Forever
           </h2>
-          <p className="text-gray-500 text-base leading-relaxed">
+          <p className="text-gray-500 text-base leading-relaxed text-[19px]" style={{ maxWidth: '450px', lineHeight: '1.9' }}>
             We don't charge you fees and we don't put up paywalls. We're the bridge that
             connects job opportunities with the best candidates, with no middleman
             involved.
