@@ -6,7 +6,9 @@
       "Bash(curl -s http://localhost:5173/)",
       "Bash(npx --yes playwright --version)",
       "Bash(npx --yes playwright install chromium)",
-      "Bash(npx playwright *)"
+      "Bash(npx playwright *)",
+      "Skill(run)",
+      "Skill(run:*)"
     ]
   }
 }

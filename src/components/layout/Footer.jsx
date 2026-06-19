@@ -1,54 +1,195 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  XIcon,
-  LinkedInIcon,
-  YouTubeIcon,
-} from '../ui/SocialIcons.jsx'
+import { useState } from "react";
 
-const SOCIAL_LINKS = [
-  { Icon: FacebookIcon, label: 'Facebook', href: '#' },
-  { Icon: InstagramIcon, label: 'Instagram', href: '#' },
-  { Icon: XIcon, label: 'X (Twitter)', href: '#' },
-  { Icon: LinkedInIcon, label: 'LinkedIn', href: '#' },
-  { Icon: YouTubeIcon, label: 'YouTube', href: '#' },
-]
+const socialIcons = [
+  {
+    label: "Facebook",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Instagram",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    label: "X",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Twitter",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+  {
+    label: "Snapchat",
+    svg: (
+      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+        <path d="M12 2C8.5 2 7 4.5 7 7v1c-.6.1-1.5.4-2 1 .5.5 1.5.8 2.5.7-.4.7-1.2 1.3-2.5 1.5.3.5 1.5.8 3 .8 0 .5-.5 1-1.5 1.3.5.4 1.5.7 3.5.7s3-.3 3.5-.7c-1-.3-1.5-.8-1.5-1.3 1.5 0 2.7-.3 3-.8-1.3-.2-2.1-.8-2.5-1.5 1 .1 2-.2 2.5-.7-.5-.6-1.4-.9-2-1V7c0-2.5-1.5-5-5-5z" />
+      </svg>
+    ),
+  },
+];
 
-export default function Footer() {
+export default function RemoteRecruitFooter() {
+  const [hovered, setHovered] = useState(null);
+
   return (
-    <footer
-      style={{
-        background: 'linear-gradient(150deg, #081840 0%, #0F2A5E 60%, #14336B 100%)',
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <a href="#" aria-label="RemoteRecruit home">
-          <img
-            src="/Logo.png"
-            alt="RemoteRecruit"
-            loading="lazy"
-            width="140"
-            height="32"
-            className="h-8 w-auto"
-          />
-        </a>
+    <div className="w-full bg-white">
+      {/* Wave + content area */}
+      <div className="relative w-full overflow-hidden" style={{ backgroundColor: "#1e3a6e" }}>
 
-        <nav aria-label="Social media links">
-          <ul className="flex items-center gap-5">
-            {SOCIAL_LINKS.map(({ Icon, label, href }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  aria-label={label}
-                  className="text-blue-300/80 hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
-                >
-                  <Icon size={18} />
-                </a>
-              </li>
+        {/* SVG wave mask — white cutout on top */}
+        <div className="absolute top-0 left-0 w-full" style={{ lineHeight: 0 }}>
+          <svg
+            viewBox="0 0 1440 160"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            className="w-full"
+            style={{ height: "160px", display: "block" }}
+          >
+            {/*
+              Wave shape:
+              - Starts at top-left (0,0) — highest point
+              - Curves down through mid section
+              - Flattens out toward right — linear/flat feel
+              White fill = cuts out the blue, revealing white bg above
+            */}
+            <path
+              d="M0,0 L0,0 C180,0 300,20 480,70 C640,115 820,140 1440,130 L1440,0 Z"
+              fill="white"
+            />
+            {/* Teal accent line along the wave edge */}
+            <path
+              d="M0,0 C180,0 300,20 480,70 C640,115 820,140 1440,130"
+              fill="none"
+              stroke="#38bdf8"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+          </svg>
+        </div>
+
+        {/* Subtle gloss highlight (top-right area) */}
+        <div
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            top: "60px",
+            right: "80px",
+            width: "360px",
+            height: "180px",
+            background: "radial-gradient(ellipse at 60% 40%, rgba(255,255,255,0.08) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Content row */}
+        <div
+          className="relative flex items-center justify-between px-16"
+          style={{ paddingTop: "180px", paddingBottom: "60px" }}
+        >
+          {/* Logo */}
+          <div className="flex flex-col leading-tight select-none">
+            <span
+              className="font-bold text-4xl tracking-tight"
+              style={{ color: "#38bdf8" }}
+            >
+              <span style={{ color: "#38bdf8" }}>·</span>Remote
+              <span className="text-white">.</span>
+            </span>
+            <span
+              className="font-bold text-4xl tracking-tight"
+              style={{ color: "#ffffff" }}
+            >
+              <span style={{ color: "#38bdf8" }}>·</span>Recruit
+            </span>
+          </div>
+
+          {/* Social icons */}
+          <div className="flex items-center gap-3">
+            {socialIcons.map((icon, i) => (
+              <button
+                key={icon.label}
+                aria-label={icon.label}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                className="flex items-center justify-center rounded-full transition-all duration-200"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  backgroundColor:
+                    hovered === i
+                      ? "rgba(56,189,248,0.25)"
+                      : "rgba(255,255,255,0.12)",
+                  color: hovered === i ? "#38bdf8" : "rgba(255,255,255,0.85)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  transform: hovered === i ? "scale(1.1)" : "scale(1)",
+                }}
+              >
+                {icon.svg}
+              </button>
             ))}
-          </ul>
-        </nav>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div
+          className="relative flex items-center justify-center py-4"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
+        >
+          {/* RR monogram */}
+          <svg
+            viewBox="0 0 48 28"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ width: "48px", height: "28px" }}
+          >
+            {/* Left R */}
+            <text
+              x="2"
+              y="22"
+              fontFamily="Arial, sans-serif"
+              fontWeight="800"
+              fontSize="22"
+              fill="#38bdf8"
+            >
+              R
+            </text>
+            {/* Right R (slightly offset, white) */}
+            <text
+              x="20"
+              y="22"
+              fontFamily="Arial, sans-serif"
+              fontWeight="800"
+              fontSize="22"
+              fill="rgba(255,255,255,0.6)"
+            >
+              R
+            </text>
+          </svg>
+        </div>
       </div>
-    </footer>
-  )
+    </div>
+  );
 }

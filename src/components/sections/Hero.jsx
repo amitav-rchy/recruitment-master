@@ -1,77 +1,90 @@
-import { motion } from 'framer-motion'
-
-const EASE = [0.22, 1, 0.36, 1]
-
-export default function Hero() {
+export default function RemoteRecruitHero() {
   return (
-    <section
-      aria-labelledby="hero-heading"
-      className="relative overflow-hidden"
+    <div
+      className="relative w-full overflow-hidden"
       style={{
-        background: 'linear-gradient(145deg, #112070 0%, #1848b0 50%, #1e55c8 100%)',
+        background: "linear-gradient(140deg, #1b3c7a 0%, #2358a8 48%, #2d68b5 100%)",
+        minHeight: "550px",
+        fontFamily: "Arial, sans-serif",
       }}
     >
-      {/* Dark blob — center-right bottom (renders first so lighter blob sits above it) */}
-      <div
-        aria-hidden="true"
-        className="absolute rounded-full"
-        style={{
-          width: '800px',
-          height: '800px',
-          top: '370px',
-          left: '27%',
-          background: 'rgba(4, 8, 26, 0.92)',
-        }}
-      />
+      {/* Decorative SVG layer */}
+      <svg
+        viewBox="0 0 900 520"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute top-0 left-0 w-full h-full pointer-events-none"
+        style={{ zIndex: 2 }}
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <circle cx="0" cy="0" r="80" fill="none" />
+        <circle
+          cx="1"
+          cy="-10"
+          r="80"
+          fill="rgba(255,255,255,0.02)"
+          transform="translate(80, 80)"
+        />
+        <circle
+          cx="570"
+          cy="400"
+          r="100"
+          fill="rgba(255,255,255,0.12)"
+          stroke="none"
+        />
+      </svg>
 
-      {/* Lighter blue blob — bottom left */}
+      {/* Hero Content */}
       <div
-        aria-hidden="true"
-        className="absolute rounded-full"
-        style={{
-          width: '320px',
-          height: '320px',
-          top: '370px',
-          left: '-35px',
-          background: 'rgba(26, 100, 210, 0.75)',
-        }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-2xl mx-auto px-6 pt-36 pb-28 text-center">
-        <motion.h1
-          id="hero-heading"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE }}
-          className="text-4xl md:text-[2.75rem] font-bold text-white mb-6 leading-tight"
+        className="relative flex flex-col items-center justify-center text-center mt-10 overflow-hidden"
+        style={{ zIndex: 10, padding: "56px 24px 160px", minHeight: "600px" }}
+      >
+        <h1
+          className="font-bold text-white m-0"
+          style={{
+            fontSize: "46px",
+            lineHeight: 1.15,
+            letterSpacing: "-0.5px",
+            marginBottom: "24px",
+          }}
         >
           RemoteRecruit's Difference
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.18, ease: EASE }}
-          className="text-white/85 text-base md:text-lg leading-relaxed"
+        <p
+          className="mx-auto m-0"
+          style={{
+            color: "rgba(255,255,255,0.88)",
+            fontSize: "16px",
+            maxWidth: "620px",
+            lineHeight: 1.8,
+          }}
         >
-          RemoteRecruit is connecting the world with an easy-to-use platform that lets
-          full-time, part-time, and freelance workers showcase their talents to businesses
-          that need them. With no paywalls, no fees, and no barriers, there's nothing but
-          you, your talents, and the next step in your career.
-        </motion.p>
+          RemoteRecruit is connecting the world with an easy-to-use platform
+          that lets full-time, part-time, and freelance workers showcase their
+          talents to businesses that need them. With no paywalls, no fees, and
+          no barriers, there's nothing but you, your talents, and the next step
+          in your career.
+        </p>
       </div>
 
-      {/* Wave separator */}
-      <div aria-hidden="true" className="relative h-16 md:h-20 -mb-px">
+      {/* Bottom Wave */}
+      <div
+        className="absolute left-0 w-full pointer-events-none"
+        style={{ bottom: "-1px", lineHeight: 0, zIndex: 5 }}
+      >
         <svg
-          viewBox="0 0 1440 80"
+          viewBox="0 0 1440 130"
+          xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full"
+          className="block w-full"
+          style={{ height: "130px" }}
         >
-          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="black" />
+          <path
+            d="M0,130 L0,30 C180,108 310,130 500,130 C660,130 770,58 980,38 C1140,22 1300,62 1440,130 L1440,130 Z"
+            fill="white"
+          />
         </svg>
       </div>
-    </section>
-  )
+    </div>
+  );
 }
