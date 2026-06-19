@@ -17,10 +17,10 @@ export const FAQ_DATA = [
 ]
 
 export const FREE_FEATURES = [
-  '1 Active Job',
-  'Basic List Placement',
-  'Unlimited Job Applicants',
-  'Invite Anyone to Apply to Your Jobs',
+  { text: '1 Active Job', included: true },
+  { text: 'Basic List Placement', included: true },
+  { text: 'Unlimited Job Applicants', included: true },
+  { text: 'Invite Anyone to Apply to Your Jobs', included: false },
 ]
 
 export const PREMIUM_FEATURES = [
@@ -34,7 +34,7 @@ export const MEMBERSHIP_FEATURES = [
   'Up to 25 active job posts',
   'Premium Placement & Visibility',
   'Messaging anyone, unlimited',
-  'Unlimited Invites',
+  'Unlimited invites',
   'View all applicants',
-  'Unlimited Invites to placement',
+  'Unlimited invites to jobseekers',
 ]

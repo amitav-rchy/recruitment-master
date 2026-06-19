@@ -1,16 +1,46 @@
-# React + Vite
+# Remote Recruite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern landing page for a remote recruitment platform — connecting global talent with remote-first companies.
 
-Currently, two official plugins are available:
+## Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Prerequisites:** Node.js 18+
 
-## React Compiler
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start development server
+npm run dev
 
-## Expanding the ESLint configuration
+# Build for production
+npm run build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Preview production build
+npm run preview
+```
+
+## Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| [React 19](https://react.dev) | UI framework |
+| [Vite 8](https://vitejs.dev) | Build tool & dev server |
+| [Tailwind CSS 4](https://tailwindcss.com) | Utility-first styling |
+| [Framer Motion](https://www.framer.com/motion/) | Animations & transitions |
+| [Lucide React](https://lucide.dev) | Icon library |
+| [React Icons](https://react-icons.github.io/react-icons/) | Extended icon set |
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── layout/       # Navbar, Footer
+│   ├── sections/     # Hero, GlobalJobBoard, ShowcaseTalents,
+│   │                 # FeeFree, PricingSection, FAQSection, CTASection
+│   └── ui/           # Reusable UI components
+├── animations/       # Framer Motion variants
+├── data/             # Static content & copy
+└── index.css         # Global styles
+```

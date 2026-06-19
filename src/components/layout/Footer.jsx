@@ -43,15 +43,7 @@ const socialIcons = [
         <circle cx="4" cy="4" r="2" />
       </svg>
     ),
-  },
-  {
-    label: "Snapchat",
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-        <path d="M12 2C8.5 2 7 4.5 7 7v1c-.6.1-1.5.4-2 1 .5.5 1.5.8 2.5.7-.4.7-1.2 1.3-2.5 1.5.3.5 1.5.8 3 .8 0 .5-.5 1-1.5 1.3.5.4 1.5.7 3.5.7s3-.3 3.5-.7c-1-.3-1.5-.8-1.5-1.3 1.5 0 2.7-.3 3-.8-1.3-.2-2.1-.8-2.5-1.5 1 .1 2-.2 2.5-.7-.5-.6-1.4-.9-2-1V7c0-2.5-1.5-5-5-5z" />
-      </svg>
-    ),
-  },
+  }
 ];
 
 export default function RemoteRecruitFooter() {
@@ -71,13 +63,6 @@ export default function RemoteRecruitFooter() {
             className="w-full"
             style={{ height: "160px", display: "block" }}
           >
-            {/*
-              Wave shape:
-              - Starts at top-left (0,0) — highest point
-              - Curves down through mid section
-              - Flattens out toward right — linear/flat feel
-              White fill = cuts out the blue, revealing white bg above
-            */}
             <path
               d="M0,0 L0,0 C180,0 300,20 480,70 C640,115 820,140 1440,130 L1440,0 Z"
               fill="white"
@@ -116,14 +101,12 @@ export default function RemoteRecruitFooter() {
               className="font-bold text-4xl tracking-tight"
               style={{ color: "#38bdf8" }}
             >
-              <span style={{ color: "#38bdf8" }}>·</span>Remote
-              <span className="text-white">.</span>
+              <img src="Logo.png" alt="" />
             </span>
             <span
               className="font-bold text-4xl tracking-tight"
               style={{ color: "#ffffff" }}
             >
-              <span style={{ color: "#38bdf8" }}>·</span>Recruit
             </span>
           </div>
 
@@ -159,35 +142,7 @@ export default function RemoteRecruitFooter() {
           className="relative flex items-center justify-center py-4"
           style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
         >
-          {/* RR monogram */}
-          <svg
-            viewBox="0 0 48 28"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ width: "48px", height: "28px" }}
-          >
-            {/* Left R */}
-            <text
-              x="2"
-              y="22"
-              fontFamily="Arial, sans-serif"
-              fontWeight="800"
-              fontSize="22"
-              fill="#38bdf8"
-            >
-              R
-            </text>
-            {/* Right R (slightly offset, white) */}
-            <text
-              x="20"
-              y="22"
-              fontFamily="Arial, sans-serif"
-              fontWeight="800"
-              fontSize="22"
-              fill="rgba(255,255,255,0.6)"
-            >
-              R
-            </text>
-          </svg>
+          <img src="minlogo.png" height="10" width="30" alt="RemoteRecruit Logo" />
         </div>
       </div>
     </div>

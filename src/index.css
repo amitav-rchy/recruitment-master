@@ -13,3 +13,8 @@ html {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/* Hide native cursor on pointer devices — custom cursor takes over */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+}
