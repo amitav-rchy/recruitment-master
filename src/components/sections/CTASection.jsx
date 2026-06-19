@@ -8,7 +8,7 @@ export default function CTASection() {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="relative overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
       style={{
         background: 'linear-gradient(150deg, #081840 0%, #0F2A5E 40%, #16406E 70%, #1A527A 100%)',
       }}
@@ -26,13 +26,13 @@ export default function CTASection() {
       <span aria-hidden="true" className="absolute bottom-10 right-10 w-3 h-3 rounded-full bg-blue-400 opacity-50" />
       <span aria-hidden="true" className="absolute top-20 right-1/3 w-2 h-2 rounded-full bg-indigo-300 opacity-30" />
 
-      <div ref={ref} className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch">
+      <div ref={ref} className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-between">
         {/* App screenshot — rises from bottom */}
         <motion.div
           variants={fadeLeft}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="flex-1 flex items-end justify-center pt-16 px-6 overflow-hidden"
+          className="flex-1 flex items-end justify-center overflow-hidden"
         >
           <img
             src="/Find Work.png"
@@ -49,7 +49,7 @@ export default function CTASection() {
           variants={fadeRight}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="flex-1 flex flex-col justify-center px-6 py-16 md:py-24"
+          className="flex-1 flex flex-col justify-center"
         >
           <p className="text-[#93B4FF] text-sm font-medium mb-3 tracking-wide">
             Are you ready?

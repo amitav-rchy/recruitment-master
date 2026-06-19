@@ -8,7 +8,7 @@ export default function ShowcaseTalents() {
 
   return (
     <section aria-labelledby="showcase-heading" className="py-20 md:py-28 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-16">
+      <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-16 justify-between">
         {/* Text */}
         <motion.div
           ref={leftRef}
@@ -43,12 +43,12 @@ export default function ShowcaseTalents() {
           <div className="relative">
             <span aria-hidden="true" className="absolute -top-3 -right-3 w-3 h-3 rounded-full bg-[#3B5BF5]" />
             <img
-              src="/Group 132.png"
+              src="/showcase.png"
               alt="Developer profile showcasing completed jobs, skills and client feedback"
               loading="lazy"
               width="480"
               height="340"
-              className="w-full max-w-md rounded-2xl shadow-2xl shadow-blue-100"
+              className="w-full"
             />
           </div>
         </motion.div>

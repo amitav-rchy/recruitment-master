@@ -12,7 +12,7 @@ export default function FeeFree() {
       aria-labelledby="feefree-heading"
       className="py-20 md:py-28 bg-[#F8F9FF] overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+      <div className="max-w-[1400px] mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16 justify-between">
         {/* Card illustration */}
         <motion.div
           ref={leftRef}
