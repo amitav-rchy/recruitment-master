@@ -55,7 +55,7 @@ export default function RemoteRecruitFooter() {
       <div className="relative w-full overflow-hidden" style={{ backgroundColor: "#1e3a6e" }}>
 
         {/* SVG wave mask — white cutout on top */}
-        <div className="absolute top-0 left-0 w-full" style={{ lineHeight: 0 }}>
+        <div className="absolute -top-1 left-0 w-full" style={{ lineHeight: 0 }}>
           <svg
             viewBox="0 0 1440 160"
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export default function RemoteRecruitFooter() {
         <div
           className="absolute rounded-full pointer-events-none"
           style={{
-            top: "60px",
+            top: "40px",
             right: "80px",
             width: "360px",
             height: "180px",

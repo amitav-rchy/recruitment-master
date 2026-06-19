@@ -9,7 +9,6 @@ export default function CTASection() {
     <section
       aria-labelledby="cta-heading"
       className="relative overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, #ECF1FA 0%, #EDF3FC 55%, #E8EDF8 100%)' }}
     >
       {/* Small teal circle — bottom right */}
       <span
@@ -30,30 +29,13 @@ export default function CTASection() {
           className="flex-1 relative flex items-center justify-center py-10 md:py-16 px-6 md:pl-16 md:pr-24"
           style={{ minHeight: 'clamp(300px, 50vw, 460px)' }}
         >
-          {/* Yellow decorative circle */}
-          <div
-            aria-hidden="true"
-            className="absolute top-8 right-6 md:right-8 w-12 h-12 md:w-16 md:h-16 rounded-full z-10 pointer-events-none"
-            style={{ background: '#F5C748' }}
-          />
-
           {/* Main app screenshot */}
           <img
             src="/Find Work.png"
             alt="RemoteRecruit app — Let's Find Work screen"
             loading="lazy"
-            className="relative z-0 w-full max-w-[240px] sm:max-w-[280px] md:max-w-[340px] rounded-2xl shadow-2xl"
+            className="absolute left-0 z-0 w-full max-w-[240px] sm:max-w-[280px] md:max-w-[640px] rounded-2xl shadow-2xl"
             style={{ boxShadow: '0 20px 60px rgba(13,27,62,0.12)' }}
-          />
-
-          {/* Filter panel — hidden on small mobile, shown from sm+ */}
-          <img
-            src="/Group 132.png"
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            className="hidden sm:block absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-20 w-[140px] md:w-[185px] rounded-2xl"
-            style={{ boxShadow: '0 16px 48px rgba(13,27,62,0.14)' }}
           />
         </motion.div>
 

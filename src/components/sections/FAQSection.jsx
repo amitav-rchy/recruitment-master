@@ -6,11 +6,11 @@ import { FAQ_DATA } from '../../data/index.js'
 
 function FAQItem({ question, answer }) {
   return (
-    <div className="mb-8 md:mb-10 last:mb-0">
+    <div className="">
       <div className="flex items-start justify-between gap-4 mb-3">
         <span
           style={{ fontWeight: 500 }}
-          className="text-lg sm:text-[20px] md:text-[22px] text-[#0B1E4F] leading-snug"
+          className="text-lg sm:text-[20px] md:text-[22px] text-[#0B1E4F] leading-snug mt-8"
         >
           {question}
         </span>

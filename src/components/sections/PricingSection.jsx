@@ -19,7 +19,7 @@ export default function PricingSection() {
   return (
     <section
       aria-labelledby="pricing-heading"
-      className="pt-16 md:pt-28 pb-0 bg-white"
+      className="pb-0 relative bottom-[-250px] z-1000000" bg-none
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pb-14 md:pb-16">
         <motion.h2
@@ -45,14 +45,14 @@ export default function PricingSection() {
             variants={staggerItem}
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-            className="rounded-2xl flex flex-col overflow-hidden"
-            style={{ background: '#EEF2F9' }}
+            className="rounded-2xl flex flex-col overflow-hidden bg-olive-50"
+            
           >
             {/* Card body — stacks on xs, row on sm+ */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 p-5 sm:p-6 flex-1">
               {/* Left: plan label */}
-              <div className="flex sm:flex-col flex-row items-center sm:justify-center sm:items-center gap-3 sm:gap-0 sm:w-24 shrink-0">
-                <p className="text-xl sm:text-2xl font-bold leading-tight" style={{ color: '#49A0C7' }}>
+              <div style={{ background: '#EEF2F9' }} className="flex sm:flex-col rounded-2xl flex-row items-center sm:justify-center sm:items-center gap-3 sm:gap-0 sm:w-24 shrink-0">
+                <p className="text-xl px-3 py-1 md:px-0 md:py-0 sm:text-2xl font-bold leading-tight" style={{ color: '#49A0C7' }}>
                   Free
                 </p>
                 <p className="text-sm text-gray-400 sm:mt-0.5">Basic</p>
@@ -84,7 +84,7 @@ export default function PricingSection() {
             <div className="px-5 sm:px-6 pb-5 sm:pb-6">
               <a
                 href="#"
-                className="block text-center bg-white border border-[#0B1E4F] text-[#0B1E4F] text-sm font-semibold py-3 rounded-xl transition-all duration-200 hover:bg-[#0B1E4F] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B1E4F]"
+                className="block text-center bg-white border-2 border-[#0B1E4F] text-[#0B1E4F] text-sm font-semibold py-3 rounded-xl transition-all duration-200 hover:bg-[#0B1E4F] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B1E4F]"
               >
                 Get Started
               </a>
@@ -96,7 +96,7 @@ export default function PricingSection() {
             variants={staggerItem}
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-            className="bg-white rounded-2xl flex flex-col"
+            className="rounded-2xl flex flex-col bg-olive-50"
             style={{ boxShadow: '0 8px 32px rgba(13,27,62,0.12)' }}
           >
             {/* Premium badge */}
